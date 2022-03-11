@@ -47,3 +47,28 @@ where sexo = 'F' and nacionalidade not like 'Brasil' and nascimento between '199
 
 select * from gafanhotos
 where sexo = 'F' and altura > '1.90';
+
+/*Exercício 10*/ 
+
+select distinct profissao, count(*) from gafanhotos
+group by profissao;
+
+/*Exercício 11*/
+
+select sexo, count(*) from gafanhotos
+where nascimento > '2005-01-01'
+group by sexo;
+
+/*Exercício 12*/
+
+select nacionalidade, count(*) from gafanhotos
+where nacionalidade not like 'Brasil'
+group by nacionalidade
+having count(nacionalidade) > '3';
+
+select avg(altura) from gafanhotos;
+
+select nome, altura, peso from gafanhotos
+where peso > 100
+group by altura
+having altura > (select avg(altura) from gafanhotos);
