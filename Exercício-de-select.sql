@@ -45,7 +45,7 @@ where sexo = 'F' and nacionalidade not like 'Brasil' and nascimento between '199
 
 /*Exercício 9*/
 
-select * from gafanhotos
+select count(*) from gafanhotos
 where sexo = 'F' and altura > '1.90';
 
 /*Exercício 10*/ 
